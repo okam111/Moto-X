@@ -34,9 +34,9 @@ onUnmounted(() => {
     <div class="hero-container">
       <img src="../assets/Hero.png" id="hero" alt="Porto Rafti Luxury Residence" />
       <div id="hero-text">
-        <h1>M O T O</h1>
-        <h1>X</h1>
-        <h1>Property Developments</h1>
+        <h1 class="hero-moto">MOTO</h1>
+        <div class="hero-x">X</div>
+        <p class="hero-subtitle">Property Developments</p>
       </div>
       <div class="scroll-indicator">
         <span class="scroll-label">DISCOVER</span>
@@ -176,33 +176,52 @@ onUnmounted(() => {
 
 #hero-text {
   position: absolute;
-  top: 30%;
+  top: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #ffffff;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   pointer-events: none;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#hero-text h1 {
+.hero-moto {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: clamp(2.4rem, 7.5vw, 4.8rem);
+  letter-spacing: clamp(10px, 3vw, 22px);
+  text-indent: clamp(10px, 3vw, 22px);
+  line-height: 1.1;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.hero-x {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  letter-spacing: 12px;
-  line-height: 1.15;
-}
-#hero-text h1:first-of-type {
-  font-weight: 400;
-}
-#hero-text h1:last-of-type {
-  font-size: clamp(0.75rem, 1.75vw, 1.375rem);
-  font-weight: 300;
+  font-size: clamp(2rem, 6.5vw, 4.2rem);
+  color: #d4af37;
+  line-height: 1.1;
+  margin: 0.2rem 0 0.6rem 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
-#hero-text h1:nth-child(2) {
-  color: #d4af37;
-  text-shadow: #b5b2ac;
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.72rem, 2.2vw, 1.1rem);
+  font-weight: 300;
+  letter-spacing: clamp(4px, 1.2vw, 8px);
+  text-indent: clamp(4px, 1.2vw, 8px);
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+  margin: 0;
+  opacity: 0.95;
 }
 
 /* Subtle Scroll Prompt */
@@ -530,8 +549,10 @@ onUnmounted(() => {
   }
 
   .showcase-stats {
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    text-align: center;
   }
 
   .showcase-card {
@@ -540,6 +561,94 @@ onUnmounted(() => {
 
   .section {
     padding: 5rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #hero-text {
+    top: 30%;
+  }
+
+  .section {
+    padding: 3.8rem 1.2rem;
+  }
+
+  .intro-section {
+    padding-top: 4.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .tag {
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .editorial-heading {
+    font-size: clamp(1.75rem, 6vw, 2.3rem);
+    line-height: 1.25;
+  }
+
+  .editorial-subheading {
+    font-size: clamp(1.45rem, 5vw, 1.9rem);
+  }
+
+  .divider {
+    margin: 1.5rem auto;
+  }
+
+  .lead-text {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .pillar-card {
+    padding: 2.2rem 1.4rem;
+  }
+
+  .showcase-card {
+    padding: 2.2rem 1.25rem;
+  }
+
+  .showcase-desc {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .showcase-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    padding: 1rem 0;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+
+  .primary-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+  }
+
+  .scroll-indicator {
+    bottom: 1.6rem;
+  }
+
+  .scroll-line {
+    height: 30px;
+  }
+
+  .footer {
+    padding: 2.5rem 1.2rem;
   }
 }
 </style>

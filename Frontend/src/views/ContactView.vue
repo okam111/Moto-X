@@ -565,7 +565,7 @@ const resetForm = () => {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
+  font-size: 16px; /* 16px prevents iOS Safari from automatically zooming the viewport on focus */
   color: #171615;
   box-sizing: border-box;
   transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
@@ -732,17 +732,45 @@ const resetForm = () => {
 
 @media (max-width: 600px) {
   .contact-page {
-    padding-top: 80px;
+    padding-top: 75px;
   }
+
+  .page-header {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .contact-wrapper {
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .info-card,
+  .form-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .info-title,
+  .form-title {
+    font-size: 1.75rem;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
-  .page-header {
-    padding: 3rem 1.5rem 2rem;
+
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
   }
-  .contact-wrapper {
-    padding: 0 1.2rem;
+
+  .footer {
+    padding: 2.5rem 1.2rem;
   }
 }
 </style>

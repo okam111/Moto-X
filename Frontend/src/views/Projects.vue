@@ -1422,26 +1422,41 @@ onUnmounted(() => {
 @media (max-width: 768px) {
   .projects-page {
     padding-top: 80px;
+    padding-bottom: 5rem;
   }
+
+  .projects-container {
+    padding: 0 1.25rem;
+  }
+
   .project-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1.2rem;
     padding: 1.8rem 1.5rem;
   }
+
+  .header-left {
+    gap: 1.2rem;
+  }
+
   .header-right {
     width: 100%;
     justify-content: space-between;
   }
+
   .project-loc {
     display: none;
   }
+
   .accordion-body {
     padding: 0 1.5rem 2rem;
   }
+
   .collage-masonry {
     column-count: 1;
   }
+
   .size-tall .image-inner img,
   .size-portrait .image-inner img,
   .size-medium .image-inner img,
@@ -1449,14 +1464,183 @@ onUnmounted(() => {
   .size-square .image-inner img {
     height: 320px;
   }
+
+  /* Tour Modal adjustments */
   .tour-top-bar {
-    padding: 1rem 1.5rem;
+    padding: 0.9rem 1.25rem;
   }
+
+  .tour-brand-sub,
+  .tour-brand-sep {
+    display: none;
+  }
+
   .tour-nav-dock {
-    padding: 1rem 1.5rem;
+    padding: 1.2rem 1.25rem;
   }
+
   .stage-nav-arrow {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-page {
+    padding-top: 75px;
+  }
+
+  .page-header {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+
+  .projects-container {
+    padding: 0 0.8rem;
+    gap: 1.2rem;
+  }
+
+  .project-header {
+    padding: 1.4rem 1rem;
+    gap: 1rem;
+  }
+
+  .project-num {
+    font-size: 1.3rem;
+  }
+
+  .project-name {
+    font-size: 1.5rem;
+  }
+
+  .project-sub {
+    font-size: 0.78rem;
+  }
+
+  .status-badge {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.75rem;
+  }
+
+  .toggle-indicator {
+    width: 30px;
+    height: 30px;
+  }
+
+  .accordion-body {
+    padding: 0 1rem 1.8rem;
+  }
+
+  .project-info-row {
+    padding: 1.4rem 0;
+    gap: 1.4rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .project-description p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .project-specs {
+    gap: 1rem;
+  }
+
+  .walkthrough-cta-box {
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+  }
+
+  .cta-title {
+    font-size: 1.3rem;
+  }
+
+  .cta-desc {
+    font-size: 0.82rem;
+  }
+
+  .walkthrough-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.78rem;
+  }
+
+  .size-tall .image-inner img,
+  .size-portrait .image-inner img,
+  .size-medium .image-inner img,
+  .size-wide .image-inner img,
+  .size-square .image-inner img {
+    height: 260px;
+  }
+
+  /* Tour Modal Mobile Fit */
+  .tour-top-bar {
+    padding: 0.75rem 1rem;
+  }
+
+  .tour-image-stage {
+    max-height: 42vh;
+  }
+
+  .room-pill {
+    top: 0.6rem;
+    left: 0.6rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .room-pill-title {
+    font-size: 1.05rem;
+  }
+
+  .tour-nav-dock {
+    padding: 1rem 1rem 1.2rem;
+    gap: 0.9rem;
+    overflow-y: auto;
+  }
+
+  .dock-room-name {
+    font-size: 1.35rem;
+  }
+
+  .dock-room-desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .step-nav-buttons {
+    width: 100%;
+  }
+
+  .step-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.65rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .spatial-buttons {
+    width: 100%;
+  }
+
+  .spatial-btn {
+    width: 100%;
+    font-size: 0.76rem;
+    padding: 0.55rem 0.8rem;
+  }
+
+  /* Lightbox close button inside viewport */
+  .lightbox-close {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: rgba(20, 19, 18, 0.7);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    z-index: 1002;
   }
 }
 </style>
